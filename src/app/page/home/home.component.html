@@ -1,4 +1,8 @@
-<p>home works!</p>
-<pre>
+<!-- <pre>
     {{ productList$ | async | json }}
-</pre>
+</pre> -->
+<div class="row">
+    <div class="col-2" *ngFor="let product of productList$ | async">
+        <app-product-card [product]="product"></app-product-card>
+    </div>
+</div>
